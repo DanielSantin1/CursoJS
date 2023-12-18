@@ -20,6 +20,7 @@ const imprimirResultado = function (nota){
         default:
             console.log('Nota inválida')
     }
+
 }
 
 imprimirResultado(9)
@@ -28,3 +29,4 @@ imprimirResultado(5)
 imprimirResultado(0)
 imprimirResultado(-45)
 imprimirResultado(11)
+imprimirResultado(4.2)
