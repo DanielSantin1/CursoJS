@@ -30,3 +30,13 @@ console.log(global.abc)
 
 
 // module.exports = {e:456,f:false, g:}
+
+
+PI= 3.1416;
+R = 3;
+Area = PI *(R*R);
+var A = "A=";
+var B = `A=${Area}`;
+
+
+console.log(B)
