@@ -7,3 +7,20 @@
 // seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondamento é possível pois atingirá 40
 // e o aluno será aprovado.
 
+function classificarNota(nota) {
+    if (nota < 38) {
+        return nota; 
+    } else {
+        let proximoMultiploDeCinco = Math.ceil(nota / 5) * 5;
+        if (proximoMultiploDeCinco - nota < 3) {
+            return proximoMultiploDeCinco; 
+        } else {
+            return nota; 
+        }
+    }
+}
+
+// Exemplos de uso
+console.log(classificarNota(84)); // Deve retornar 85
+console.log(classificarNota(29)); // Deve retornar 29
+console.log(classificarNota(38)); // Deve retornar 40
