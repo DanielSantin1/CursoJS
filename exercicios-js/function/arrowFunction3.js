@@ -1,4 +1,4 @@
-let compraraComThis = function(param) {
+let compraraComThis = function (param) {
     console.log(this === param)
 }
 
