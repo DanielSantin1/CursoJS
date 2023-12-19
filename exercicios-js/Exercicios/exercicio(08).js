@@ -5,23 +5,34 @@
 // vetor com o número de vezes que ele bateu seu recorde de maior número de pontos e quando fez seu pior
 // jogo. (Número do pior jogo).
 
-let StringPontuacoes = '10,20,20,8,25,3,0,30,1'
-
-function desempenhoPedro() {
-    let recordeBatido = 0;
-    let piorJogo = 3;
-    let melhorPontuacao = 6
-    let piorPontuacao = 3
-    for (let i = 1; i < StringPontuacoes.length; i++) {
-        if (parseInt(StringPontuacoes[i]) > parseInt(melhorPontuacao)) {
-            melhorPontuacao = StringPontuacoes[i]
-            recordeBatido++
-        } else if (parseInt(StringPontuacoes[i]) < parseInt(piorPontuacao)) {
-            piorPontuacao = StringPontuacoes[i]
-            piorJogo = i + 1;
-        }
+const pontos = "12, 3, 5, 16, 45, 2, 5, -2, 21, 60";
+ 
+function avaliarDesempenho(pontuacoes) {
+  const pontos = pontuacoes.split(", ");
+  let recordes = 0;
+  let maiorPontuacao = pontos[0];
+  let menorPontuacao = pontos[0];
+  let piorJogo = null;
+ 
+  for (let i = 1; i < pontos.length; i++) {
+    if (maiorPontuacao < pontos[i]) {
+      maiorPontuacao = pontos[i];
+      recordes++;
+    } else if (pontos[i] < menorPontuacao) {
+      menorPontuacao = pontos[i];
+      piorJogo = pontos.indexOf(pontos[i]);
     }
-    return [recordeBatido, piorJogo]
-
+  }
+ 
+  console.log("A sua maior pontuação foi de", maiorPontuacao);
+  console.log("A sua menor pontuação foi de", menorPontuacao);
+  console.log("Você quebrou o seu recorde", recordes, " vezes");
+  console.log(
+    "No seu pior jogo você fez",
+    menorPontuacao,
+    " pontos e você pode ver essa pontuação na posição ",
+    piorJogo,
+    "do array"
+  );
 }
-console.log(desempenhoPedro(StringPontuacoes))
+avaliarDesempenho(pontos);
