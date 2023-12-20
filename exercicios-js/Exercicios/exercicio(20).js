@@ -17,4 +17,4 @@ function notas(valor) {
     }
     return resultado.join(". ") + ".";
 }
-console.log(notas(14564857))
+console.log(notas(200))
