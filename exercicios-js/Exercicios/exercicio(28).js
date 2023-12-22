@@ -13,6 +13,7 @@ function lerVetor() {
             console.log('Número impar: ' + vetor[i]);
             contadorImpares++;
         }
+        console.log(contadorImpares)
     }
     
 
