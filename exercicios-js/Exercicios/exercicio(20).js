@@ -18,3 +18,19 @@ function notas(valor) {
     return resultado.join(". ") + ".";
 }
 console.log(notas(200))
+
+// Este é um exemplo de um for...of loop em JavaScript. Diferente do tradicional for loop, o for...of loop é usado para iterar sobre os valores dos 
+//elementos de objetos iteráveis, como arrays, strings, maps, sets, etc. Neste caso, ele está iterando sobre o array notas.
+// Variável nota:
+// A cada iteração do loop, a variável nota recebe o valor de um elemento do array notas.
+// Na primeira iteração, nota será 100, na segunda será 50, e assim por diante até o último valor do array, que é 1.
+// Por Que Usar for...of:
+// O loop for...of é utilizado aqui por sua simplicidade e legibilidade. Ele fornece uma maneira direta de acessar cada valor de nota no array notas, 
+//sem a necessidade de usar um índice para acessar os elementos.
+// Com o for...of, o código fica mais limpo e fácil de entender, pois elimina a necessidade de controlar manualmente um índice e verificar o tamanho do array.
+// Funcionalidade Dentro do Loop:
+// Dentro do loop, o código calcula quantas notas de cada valor são necessárias para compor o valor total especificado.
+// Esse cálculo é feito usando a divisão e o método Math.floor para garantir que apenas um número inteiro de notas seja considerado.
+// Eficiência:
+// A ordem dos valores no array notas é importante. Eles estão dispostos de forma decrescente, começando com a nota de maior valor (100) até a menor (1).
+// Isso garante que o algoritmo sempre use a maior nota possível primeiro, minimizando o número total de notas necessárias.
