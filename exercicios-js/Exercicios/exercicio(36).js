@@ -2,7 +2,7 @@
 // inteiro. Faça com que a primeira função retorne outro vetor que será resultado da multiplicação de cada
 // elemento pelo número passado como parâmetro. A segunda função fará o mesmo da primeira se e somente se
 // o valor do elemento for maior que 5.
-let meuVetor = [2, 6, 10];
+let meuVetor = [2, 7,8, 10];
 let numero = 3;
 
 function multiplicaVetor(vetor, numero) {
@@ -25,5 +25,5 @@ function multiplicaSeMaiorQueCinco(vetor, numero) {
     return resultado;
 }
 
-console.log(multiplicaVetor(meuVetor, numero)); // Deve retornar [6, 18, 30]
-console.log(multiplicaSeMaiorQueCinco(meuVetor, numero)); // Deve retornar [2, 18, 30]
+console.log(multiplicaVetor(meuVetor, numero)); 
+console.log(multiplicaSeMaiorQueCinco(meuVetor, numero)); 
